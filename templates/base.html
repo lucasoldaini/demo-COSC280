@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/static/img/graphics/favicon.ico">
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <div id="top-banner-outer">
+        <div id="top-banner-middle">
+            <div id="top-banner-inner">
+                Y'all Enjoy Looking at Plates
+            </div>
+        </div>
+    </div>
+
+    <div id="base-content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

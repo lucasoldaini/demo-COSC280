@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/results.css">
+{% if query != "" %}
+    <title>"{{ query }}" on Y.E.L.P.</title>
+{% else %}
+    <title>Y.E.L.P.</title>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<div id="table-container">
+    <table id="search-results">
+        <tr>
+            <td><b id="table-header">Venue Name</b></td>
+            <td><b id="table-header">Venue Type</b></td>
+            <td><b id="table-header">Venue Address</b></td>
+        </tr>
+        {% for r in results %}
+            <tr>
+                <td><a href="venue/{{ r['id'] }}">{{ r['name'] }}</a></td>
+                <td>{{ r['type'] }}</td>
+                <td><a href="https://www.google.com/maps/preview?hl=en&amp;q={{ r['address'] }}" target="_blank">{{ r['address'] }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<a href="/" id="back-search">&larr; back to search</a>
+{% endblock %}

@@ -1,0 +1,38 @@
+#table-container{
+    text-align: center;
+    margin-top: 10em;
+}
+
+table#search-results{
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 14pt;
+    color: #222222;
+    background-color: #FAFAFA;
+    border: 1px solid #BBBBBB;
+    border-radius: 16px;
+    padding: 18pt 6pt;
+}
+
+th,td {
+    padding: 8px;
+}
+
+b#table-header{
+    color: #B90C04;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #222222;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#back-search{
+    font-family: sans-serif;
+    padding-top: 10px;
+    margin-left: 4px;
+}

@@ -1,0 +1,44 @@
+body{
+    height:100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    min-width: 320px;
+    background-color: #eeeeee;
+    color: #222222;
+    font-size: 16px;
+}
+
+
+#top-banner-outer {
+    display: table;
+    position: relative;
+    height: 4em;
+    width: 100%;
+    background-color: #B90C04;
+    text-align: center;
+}
+
+#top-banner-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#top-banner-inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    color: #FAFAFA;
+    font-family: Arial-BoldMT;
+    font-size: 36px;
+}
+
+#base-content{
+    position: relative;
+    margin-top: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    height: 100%;
+}

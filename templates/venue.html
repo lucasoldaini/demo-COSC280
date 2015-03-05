@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/venue.css">
+<title>{{ venue['name'] }} &mdash; Y.E.L.P.</title>
+{% endblock %}
+
+{% block content %}
+<div id="venue-name">{{ venue['name'] }}</div>
+
+<div id="table-container">
+    <table id="venue-info">
+        <tr>
+            <td id='cell-left'>Venue type</td>
+            <td id='cell-right'>{{venue['type']}}</td>
+        </tr>
+        <tr>
+            <td id='cell-left'>Address</td>
+            <td id='cell-right'>{{venue['address']}}</td>
+        </tr>
+        <tr>
+            <td id='cell-left'>Phone number</td>
+            <td id='cell-right'>{{venue['phone']}}</td>
+        </tr>
+        <tr>
+            <td id='cell-left'>Is wheelchair accessible?</td>
+            <td id='cell-right'>{{venue['has_wheelchair']}}</td>
+        </tr>
+        <tr>
+            <td id='cell-left'>Good for kids</td>
+            <td id='cell-right'>{{venue['has_kids']}}</td>
+        </tr>
+        <tr>
+            <td id='cell-left'>Accepts credit cards</td>
+            <td id='cell-right'>{{venue['has_credit_card']}}</td>
+        </tr>
+        <tr>
+            <td id='cell-left'>Offers Wi-Fi?</td>
+            <td id='cell-right'>{{venue['has_wifi']}}</td>
+        </tr>
+        <tr>
+            <td id='cell-left'>Takes reservations?</td>
+            <td id='cell-right'>{{venue['has_reservations']}}</td>
+        </tr>
+    </table>
+</div>
+<div id="img-container">
+     <img src="/static/img/venues/{{venue['pic_id']}}.jpg" alt="Mountain View">
+</div>
+
+<div id="comments-container">
+    {% if cnt_comments > 0 -%}
+        {% for i, comment in comments %}
+        <div id="comment">
+            {{ comment['comment'] }}
+        </div>
+            {% if i < (cnt_comments - 1) -%}
+                <hr>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <div id="no-comment">No comments yet.</div>
+    {% endif %}
+</div>
+
+{% endblock %}

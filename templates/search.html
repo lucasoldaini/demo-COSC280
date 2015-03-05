@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/static/css/search.css">
+<title>Y.E.L.P.</title>
+{% endblock %}
+
+{% block content %}
+<form action="search" id="searchform">
+<input type="text" name="query" id="searchbox" onfocus="emptySearchBox()" onblur="setDefaultValueSearchBox()" value="">
+<input type="submit" value="Search" id="submit-search-button">
+</form>
+
+
+<script type="text/javascript" src="/static/js/search.js"></script>
+{% endblock %}
