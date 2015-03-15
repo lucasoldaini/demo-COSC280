@@ -19,9 +19,9 @@
         </tr>
         {% for r in results %}
             <tr>
-                <td><a href="venue/{{ r['id'] }}">{{ r['name'] }}</a></td>
+                <td><a class='venue-link' href="venue/{{ r['id'] }}">{{ r['name'] }}</a></td>
                 <td>{{ r['type'] }}</td>
-                <td><a href="https://www.google.com/maps/preview?hl=en&amp;q={{ r['address'] }}" target="_blank">{{ r['address'] }}</a></td>
+                <td><a class='loc-link' href="https://www.google.com/maps/preview?hl=en&amp;q={{ r['address'] }}" target="_blank">{{ r['address'] }}</a></td>
             </tr>
         {% endfor %}
     </table>

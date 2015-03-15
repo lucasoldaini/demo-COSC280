@@ -22,12 +22,12 @@ b#table-header{
     color: #B90C04;
 }
 
-a:link, a:visited, a:hover, a:active {
+a.venue-link, a.loc-link, a#back-search {
     color: #222222;
     text-decoration: none;
 }
 
-a:hover {
+a.venue-link:hover, a.loc-link:hover {
     text-decoration: underline;
 }
 

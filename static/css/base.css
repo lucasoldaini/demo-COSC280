@@ -10,6 +10,11 @@ body{
     font-size: 16px;
 }
 
+a.no-decoration{
+    text-decoration: none;
+    color: inherit;
+}
+
 
 #top-banner-outer {
     display: table;
@@ -30,7 +35,8 @@ body{
     margin-right: auto;
     width: 100%;
     color: #FAFAFA;
-    font-family: Arial-BoldMT;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
     font-size: 36px;
 }
 
