@@ -15,6 +15,7 @@ app.host = config.APP_HOST
 app.port = config.APP_PORT
 app.debug = config.APP_DEBUG
 
+
 @app.route('/', methods=['GET'])
 def splash():
     """Render the landing page"""
